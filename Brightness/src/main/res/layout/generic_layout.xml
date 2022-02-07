@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright © 2022. Richard P. Parkins, M. A.
+   Released under GPL V3 or later
+   This layout is used for the one and only activity.
+   It is just a container since the content is generated and modified dynamically.
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/genericlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</ScrollView>

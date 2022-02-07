@@ -1,0 +1,55 @@
+// Copyright © 2022. Richard P. Parkins, M. A.
+// Released under GPL V3 or later
+
+plugins {
+    id 'com.android.application'
+}
+
+def keystorePropertiesFile = rootProject.file("../Keys/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdk 31
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    defaultConfig {
+        applicationId "uk.co.yahoo.p1rpp.brightness"
+        minSdk 26
+        targetSdk 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            delete("build/intermediates/incremental/mergeReleaseResources/merger.xml")
+            resValue("string", 'build_time', "${(new Date()).toString()}")
+        }
+        debug {
+            signingConfig signingConfigs.config
+            delete("build/intermediates/incremental/mergeDebugResources/merger.xml")
+            resValue("string", 'build_time', "${(new Date()).toString()}")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.4.0'
+}

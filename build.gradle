@@ -1,0 +1,16 @@
+// Copyright © 2022. Richard P. Parkins, M. A.
+// Released under GPL V3 or later
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.0'
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

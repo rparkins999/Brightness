@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Copyright © 2022. Richard P. Parkins, M. A.
+   Released under GPL V3 or later
+  -->
+<resources>
+    <string name="app_name">Brightness</string>
+    <string name="requestpermission">Request WRITE_SETTINGS PERMISSION</string>
+    <string name="settingsbrightness">Settings Brightness</string>
+    <string name="settingsbrightnesshelp">The slider and numeric field below
+        reflect, and enable you to set if the app has WRITE_SETTINGS PERMISSION,
+        the screen brightness in the Settings page.</string>
+    <string name="needpermission">
+        You need to request WRITE_SETTINGS PERMISSION to change this.</string>
+    <string name="requestpermissionhelp">
+        Press this button to Request WRITE_SETTINGS PERMISSION</string>
+    <string name="alreadychecked">Already Checked</string>
+    <string name="auto">Auto</string>
+    <string name="manual">Manual</string>
+    <string name="settingsautohelpdisabled">
+        This button is checked if the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness_mode\" is AUTO.
+        You need to request WRITE_SETTINGS PERMISSION to change it.</string>
+    <string name="settingsautohelpenabled">
+        Press this button to set the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness_mode\" to AUTO.</string>
+    <string name="settingsmanualhelpdisabled">
+        This button is checked if the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness_mode\" is MANUAL.
+        You need to request WRITE_SETTINGS PERMISSION to change it.</string>
+    <string name="settingsmanualhelpenabled">
+        Press this button to set the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness_mode\". to AUTO.</string>
+    <string name="settingsbrightnesssliderhelpdisabled">
+        This slider bar shows the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness\".
+        You need to request WRITE_SETTINGS PERMISSION to change it.
+    </string>
+    <string name="settingsbrightnesssliderhelpenabled">This slider bar shows
+        the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness\".
+        You can adjust it by dragging the slider or clicking on a new value.</string>
+    <string name="settingsbrightnessvaluehelpdisabled">
+        This number shows the global screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness\".
+        You need to request WRITE_SETTINGS PERMISSION to change it.</string>
+    <string name="settingsbrightnessvaluehelpenabled">This number shows the global
+        screen brightness reported by
+        Settings.System.getInt(…,\"screen_brightness\".
+        You can adjust it by overtyping with a new value.</string>
+    <string name="windowbrightness">Window Brightness</string>
+    <string name="windowbrightnesshelp">The slider and numeric field below
+        reflect and enable you to override the screen brightness from the
+        Settings page with a local value which is used only for this page.
+    </string>
+    <string name="settings">Settings</string>
+    <string name="override">Override</string>
+    <string name="windowsettingshelp">
+        Press this button to set the screen brightness for this app\'s window as
+        reported by getWindow().getAttributes().screenBrightness to -1,
+        which means that the screen brightness from the global settings
+        is used for this page.</string>
+    <string name="windowoverridehelp">
+        Press this button to set the screen brightness for this page as
+        controlled by getWindow().getAttributes().screenBrightness to
+        the screen brightness from the global settings:
+        the slider will appear enabling you to adjust the brightness
+        to some other value.</string>
+    <string name="windowbrightnesssliderhelp">This slider bar shows the value of
+        getWindow().getAttributes().screenBrightness rescaled to 0..255,
+        if it is positive. If the value is negative, the slider is not shown.
+        You can adjust it by dragging the slider or clicking on a new value.</string>
+    <string name="windowbrightnessvaluehelp">This number shows the value of
+        getWindow().getAttributes().screenBrightness rescaled to 0..255,
+        if it is positive. If the value is negative, the number is not shown.
+        You can adjust it by overtyping with a new value.</string>
+    <string name="opacity">Opacity</string>
+    <string name="opacityhelp">The slider and numeric field below
+        enable you to set he opacity of the text in this window.
+        Setting opacity provides an alternative way for an app to set
+        the effective screen brightness in dark mode.
+        Note however that this will not save power on a backlit screen.
+    </string>
+    <string name="opacitysliderhelp">
+        This slider bar shows the opacity of the text in this window.
+        You can adjust it by dragging the slider
+        or clicking on a new value.</string>
+    <string name="opacityvaluehelp">
+        This number shows the opacity of the text in this window.
+        You can adjust it by overtyping with a new value.</string>
+    <string name="luxlabel">"Lux: "</string>
+    <string name="luxhelp">This shows the ambient light value in lux
+        as measured by the device\'s sensor.</string>
+</resources>
